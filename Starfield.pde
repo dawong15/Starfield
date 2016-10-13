@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
 Particle[] star;
 void setup()
 {
@@ -30,11 +26,7 @@ class NormalParticle implements Particle
 	double ang,dDir,dSpeed,dX,dY,size;
 	int r,g,b;
 	NormalParticle(){
-<<<<<<< HEAD
 		ang=(Math.random()*2)*PI;
-=======
-		ang=(Math.random()*2*Math.PI);
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
 		dDir=2*Math.PI*Math.random();
 		dSpeed=Math.random()*10;
 		dX=200;
@@ -45,13 +37,8 @@ class NormalParticle implements Particle
 		b=(int)(Math.random()*255);
 	}
 	public void move(){
-<<<<<<< HEAD
 		dX=dX+Math.cos(ang);
 		dY=dY+Math.sin(ang);
-=======
-		dX=dX+Math.cos(ang)*dSpeed;
-		dY=dY+Math.sin(ang)+dSpeed;
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
 	}
 	public void show(){
 		fill(r,g,b);
@@ -62,11 +49,7 @@ class NormalParticle implements Particle
 		dSpeed=Math.random()*10;
 		dX=200;
 		dY=200;
-<<<<<<< HEAD
 		ang=(Math.random()*2)*PI;	
-=======
-		ang=(Math.random()*2*Math.PI);	
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
 			}
 	}
 }
@@ -75,7 +58,6 @@ interface Particle
 	public void move();
 	public void show();
 	public void reset();
-<<<<<<< HEAD
 }
 class OddballParticle implements Particle
 {
@@ -97,76 +79,7 @@ class OddballParticle implements Particle
 	public void show(){
 		fill(r,g,b);
 		ellipse((float)dX,(float)dY,(float)size,(float)size);
-=======
-}
-class OddballParticle implements Particle
-{
-	double ang,dDir,dSpeed,dX,dY,size;
-	int r,g,b;
-	OddballParticle(){
-		ang=(Math.random()*2*Math.PI);
-		
-		dDir=2*Math.PI*Math.random();
-		dSpeed=Math.random()*10;
-		dX=200;
-		dY=200;
-		size=(int)(Math.random()*15+1);
-		r=(int)(Math.random()*255);
-		g=(int)(Math.random()*255);
-		b=(int)(Math.random()*255);
-	}
-	
-	public void show(){
-		fill(r,g,b);
-		ellipse((float)dX,(float)dY,(float)size,(float)size);
 
-	}
-	public void move(){
-		dX=dX+Math.cos(ang)*dSpeed;
-		dY=dY+Math.sin(ang)+dSpeed;
-		
-	}
-	public void reset(){
-		if(dX>500 || dX<0 || dY>500 || dY<0){
-		dSpeed=Math.random()*10;
-		dX=200;
-		dY=200;
-		ang=(Math.random()*2*Math.PI);
-	}
-	}
-}
-class JumboParticle extends NormalParticle
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
-
-{
-	double oX,oY;
-JumboParticle(){
-		ang=(Math.random()*2*Math.PI);
-		dDir=2*Math.PI*Math.random();
-		dSpeed=Math.random()*10;
-		oX=200;
-		oY=200;
-		size=(int)(Math.random()*50+1);
-		r=(int)(Math.random()*255);
-		g=(int)(Math.random()*255);
-		b=(int)(Math.random()*255);
-	}
-	public void move(){
-		oX=oX+Math.cos(ang)*dSpeed;
-		oY=oY+Math.sin(ang)+dSpeed;
-	}
-	public void show(){
-		fill(r,g,b);
-		ellipse((float)oX,(float)oY,(float)size,(float)size);
-	}
-	public void reset(){
-		if(oX>500 || oX<0 || oY>500 || oY<0){
-		dSpeed=Math.random()*10;
-		oX=200;
-		oY=200;
-		ang=(Math.random()*2*Math.PI);
-		size=(int)(Math.random()*50+1);
-	}
 	}
 	public void move(){
 		dX=dX+Math.cos(ang);
@@ -184,7 +97,6 @@ JumboParticle(){
 }
 class JumboParticle extends NormalParticle
 
-<<<<<<< HEAD
 {
 	double oX,oY;
 JumboParticle(){
@@ -213,14 +125,8 @@ JumboParticle(){
 		oY=200;
 		ang=(Math.random()*2)*PI;
 		size=(int)(Math.random()*50+10);
-		//
 	}
 	}
 }
-=======
 
 
-
-
-
->>>>>>> 574738d19b3cd578709bf6aaad69f6b82ac70bbd
