@@ -125,6 +125,7 @@ JumboParticle(){
 		oY=200;
 		ang=(Math.random()*2)*PI;
 		size=(int)(Math.random()*50+10);
+		//
 	}
 	}
 }
