@@ -1,4 +1,3 @@
-
 Particle[] star;
 void setup()
 {
@@ -27,7 +26,7 @@ class NormalParticle implements Particle
 	double ang,dDir,dSpeed,dX,dY,size;
 	int r,g,b;
 	NormalParticle(){
-		ang=(Math.random()*2*Math.PI);
+		ang=(Math.random()*2)*PI;
 		dDir=2*Math.PI*Math.random();
 		dSpeed=Math.random()*10;
 		dX=200;
@@ -38,8 +37,8 @@ class NormalParticle implements Particle
 		b=(int)(Math.random()*255);
 	}
 	public void move(){
-		dX=dX+Math.cos(ang)*dSpeed;
-		dY=dY+Math.sin(ang)+dSpeed;
+		dX=dX+Math.cos(ang);
+		dY=dY+Math.sin(ang);
 	}
 	public void show(){
 		fill(r,g,b);
@@ -50,7 +49,7 @@ class NormalParticle implements Particle
 		dSpeed=Math.random()*10;
 		dX=200;
 		dY=200;
-		ang=(Math.random()*2*Math.PI);	
+		ang=(Math.random()*2)*PI;	
 			}
 	}
 }
@@ -65,13 +64,13 @@ class OddballParticle implements Particle
 	double ang,dDir,dSpeed,dX,dY,size;
 	int r,g,b;
 	OddballParticle(){
-		ang=(Math.random()*2*Math.PI);
+		ang=(Math.random()*2)*PI;
 		
 		dDir=2*Math.PI*Math.random();
-		dSpeed=Math.random()*10;
+		dSpeed=Math.random()*50;
 		dX=200;
 		dY=200;
-		size=(int)(Math.random()*15+1);
+		size=(int)(Math.random()*15+10);
 		r=(int)(Math.random()*255);
 		g=(int)(Math.random()*255);
 		b=(int)(Math.random()*255);
@@ -83,8 +82,8 @@ class OddballParticle implements Particle
 
 	}
 	public void move(){
-		dX=dX+Math.cos(ang)*dSpeed;
-		dY=dY+Math.sin(ang)+dSpeed;
+		dX=dX+Math.cos(ang);
+		dY=dY+Math.sin(ang);
 		
 	}
 	public void reset(){
@@ -92,7 +91,7 @@ class OddballParticle implements Particle
 		dSpeed=Math.random()*10;
 		dX=200;
 		dY=200;
-		ang=(Math.random()*2*Math.PI);
+		ang=(Math.random()*2)*PI;
 	}
 	}
 }
@@ -101,19 +100,19 @@ class JumboParticle extends NormalParticle
 {
 	double oX,oY;
 JumboParticle(){
-		ang=(Math.random()*2*Math.PI);
+		ang=(Math.random()*2)*PI;
 		dDir=2*Math.PI*Math.random();
 		dSpeed=Math.random()*10;
 		oX=200;
 		oY=200;
-		size=(int)(Math.random()*50+1);
+		size=(int)(Math.random()*100+20);
 		r=(int)(Math.random()*255);
 		g=(int)(Math.random()*255);
 		b=(int)(Math.random()*255);
 	}
 	public void move(){
-		oX=oX+Math.cos(ang)*dSpeed;
-		oY=oY+Math.sin(ang)+dSpeed;
+		oX=oX+Math.cos(ang);
+		oY=oY+Math.sin(ang);
 	}
 	public void show(){
 		fill(r,g,b);
@@ -124,14 +123,10 @@ JumboParticle(){
 		dSpeed=Math.random()*10;
 		oX=200;
 		oY=200;
-		ang=(Math.random()*2*Math.PI);
-		size=(int)(Math.random()*50+1);
+		ang=(Math.random()*2)*PI;
+		size=(int)(Math.random()*50+10);
 	}
 	}
 }
-
-
-
-
 
 
